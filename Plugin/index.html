@@ -654,10 +654,7 @@
 
     <div class="wrap">
         <div class="announcement-banner" id="announcementBanner">
-            <p class="banner-item" active>禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！</p>
-            <p class="banner-item">本网站由个人制作与维护，与Loon官方无关。</p>
-            <p class="banner-item">如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往 App Store 进行软件更新。</p>
-        </div>
+            </div>
 
         <div class="search-box">
             <input id="search" placeholder="搜索插件名称或标签…">
@@ -692,6 +689,7 @@
                 github: 'GitHub',
                 bannerWarning: '禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！',
                 bannerDisclaimer: '本网站由个人制作与维护，与Loon官方无关。',
+                bannerUpdateNotice: '如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往 App Store 进行软件更新。',
                 searchPlaceholder: '搜索插件名称或标签…',
                 catAll: '全部',
                 catAdblock: '去广告',
@@ -721,15 +719,31 @@
             const sectionTitleEl = document.getElementById('sectionTitle');
             const updateTimeEl = document.getElementById('updateTime');
 
+            // --- 动态创建公告 ---
+            const bannerContainer = document.getElementById('announcementBanner');
+            const bannerMessages = [
+                TEXT.bannerWarning,
+                TEXT.bannerDisclaimer,
+                TEXT.bannerUpdateNotice
+            ];
+
+            bannerMessages.forEach((message, index) => {
+                const p = document.createElement('p');
+                p.className = 'banner-item';
+                // 第一个公告需要 'active' 类来初始显示
+                if (index === 0) {
+                    p.classList.add('active');
+                }
+                p.textContent = message;
+                bannerContainer.appendChild(p);
+            });
+
             // 根据 TEXT 常量更新页面文本内容
             document.querySelector('h1').textContent = TEXT.repoTitle;
             document.querySelector('header p').textContent = TEXT.repoDesc;
             document.querySelector('#theme-toggle-wrapper span:nth-of-type(2)').textContent = TEXT.toggleTheme;
             document.querySelector('.control-group a[aria-label="Telegram"] span:nth-of-type(2)').textContent = TEXT.telegram;
             document.querySelector('.control-group a[aria-label="GitHub"] span:nth-of-type(2)').textContent = TEXT.github;
-            // 注意：新的公告是硬编码在HTML中的，如果需要动态化，也应在此处处理
-            document.querySelector('#announcementBanner .banner-item:nth-of-type(1)').textContent = TEXT.bannerWarning;
-            document.querySelector('#announcementBanner .banner-item:nth-of-type(2)').textContent = TEXT.bannerDisclaimer;
             searchEl.placeholder = TEXT.searchPlaceholder;
             document.querySelector('.tabs button[data-cat="all"]').textContent = TEXT.catAll;
             document.querySelector('.tabs button[data-cat="去广告"]').textContent = TEXT.catAdblock;
