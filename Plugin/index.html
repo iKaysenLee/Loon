@@ -656,6 +656,7 @@
         <div class="announcement-banner" id="announcementBanner">
             <p class="banner-item" active>禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！</p>
             <p class="banner-item">本网站由个人制作与维护，与Loon官方无关。</p>
+            <p class="banner-item">如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往 App Store 进行软件更新。</p>
         </div>
 
         <div class="search-box">
@@ -726,6 +727,7 @@
             document.querySelector('#theme-toggle-wrapper span:nth-of-type(2)').textContent = TEXT.toggleTheme;
             document.querySelector('.control-group a[aria-label="Telegram"] span:nth-of-type(2)').textContent = TEXT.telegram;
             document.querySelector('.control-group a[aria-label="GitHub"] span:nth-of-type(2)').textContent = TEXT.github;
+            // 注意：新的公告是硬编码在HTML中的，如果需要动态化，也应在此处处理
             document.querySelector('#announcementBanner .banner-item:nth-of-type(1)').textContent = TEXT.bannerWarning;
             document.querySelector('#announcementBanner .banner-item:nth-of-type(2)').textContent = TEXT.bannerDisclaimer;
             searchEl.placeholder = TEXT.searchPlaceholder;
