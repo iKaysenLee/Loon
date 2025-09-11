@@ -1,6 +1,4 @@
 # 2025-07-11 16:39:08
-# https://kelee.one/Tool/Loon/Lsr/AI.lsr
-# https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list
 
 # OpenAI ChatGPT
 AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-), (DOMAIN-SUFFIX, webpubsub.azure.com))
@@ -18,14 +16,6 @@ DOMAIN-SUFFIX, oaistatic.com
 DOMAIN-SUFFIX, oaiusercontent.com
 DOMAIN-SUFFIX, openai.com
 DOMAIN-SUFFIX, sora.com
-
-# Apple Intelligence
-DOMAIN, apple-relay.apple.com
-DOMAIN, apple-relay.cloudflare.com
-DOMAIN, apple-relay.fastly-edge.com
-DOMAIN, cp4.cloudflare.com
-DOMAIN, guzzoni.apple.com
-DOMAIN-SUFFIX, smoot.apple.com
 
 # GitHub Copilot
 DOMAIN, api.githubcopilot.com
@@ -57,14 +47,6 @@ DOMAIN-SUFFIX, claudeusercontent.com
 IP-CIDR, 160.79.104.0/23, no-resolve
 IP-CIDR6, 2607:6bc0::/48, no-resolve
 
-# JetBrains AI
-DOMAIN-SUFFIX, grazie.ai
-DOMAIN-SUFFIX, grazie.aws.intellij.net
-DOMAIN-SUFFIX, jetbrains.ai
-
-# Meta AI
-DOMAIN, imagine.meta.com
-DOMAIN-SUFFIX, meta.ai
 
 # Perplexity AI
 DOMAIN-SUFFIX, pplx.ai
