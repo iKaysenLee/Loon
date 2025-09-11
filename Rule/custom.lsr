@@ -68,3 +68,29 @@ DOMAIN-SUFFIX, hulu.co.uk
 DOMAIN-SUFFIX, primevideo.co.uk
 DOMAIN-SUFFIX, peacocktv.co.uk
 DOMAIN-SUFFIX, disney.co.uk
+
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,analytics.google.com
+DOMAIN-SUFFIX,ssl.google-analytics.com
+DOMAIN,stats.g.doubleclick.net
+DOMAIN,collect.g.doubleclick.net
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,firebaseinstallations.googleapis.com
+DOMAIN-SUFFIX,firebaseinstallations-pa.googleapis.com
+DOMAIN-SUFFIX,connect.facebook.net
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,graph.facebook.com
+DOMAIN-SUFFIX,pixel.facebook.com
+DOMAIN-SUFFIX,static.hotjar.com
+DOMAIN-SUFFIX,hotjar.com
+DOMAIN-SUFFIX,insights.hotjar.com
+DOMAIN-SUFFIX,metrica.yandex.com
+DOMAIN-SUFFIX,mc.yandex.ru
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,heap.io
+
+
+
