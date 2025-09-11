@@ -8,9 +8,9 @@
 #!loon_version = 3.3.3(894)
 #!homepage = https://NSRingo.github.io/guide/Weather/weather-kit
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/AppleWeather.png
-#!date = 2025-09-09 22:00
+#!date = 2025-09-11 12:00
 
-# 2025-08-29 10:32:38 v2.0.3
+# 2025-09-09 16:47:30 v2.0.6
 # https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin
 
 [Argument]
@@ -32,6 +32,7 @@ LogLevel = select, "WARN", "OFF", "ERROR", "INFO", "DEBUG", "ALL", tag = [调试
 [Rule]
 DOMAIN, weather-analytics-events.apple.com, REJECT-DROP
 DOMAIN-SUFFIX, tthr.apple.com, REJECT-DROP
+DOMAIN, tether.edge.apple, REJECT-DROP
 
 [Script]
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, tag = [iRingo_WeatherKit]v1.availability.response, argument=[{DataSets},{Weather.Provider},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.ComparisonProvider},{AQI.Local.ReplaceScales},{AQI.Local.Scale},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
