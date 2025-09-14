@@ -24,6 +24,7 @@ DOMAIN-SUFFIX, nytimes.com
 DOMAIN-SUFFIX, wsj.com
 DOMAIN-SUFFIX, reddit.com
 DOMAIN-SUFFIX, github.com
+DOMAIN-SUFFIX, github.io
 DOMAIN-SUFFIX, stackoverflow.com
 DOMAIN-SUFFIX, dropbox.com
 DOMAIN-SUFFIX, onedrive.com
